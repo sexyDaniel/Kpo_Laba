@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kpo_4311_Lazarev_Main", "Kpo_4311_Lazarev_Main\Kpo_4311_Lazarev_Main.csproj", "{DE7FEFB2-D76B-4961-9BCE-1386500C5517}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kpo_4311_Lazarev_Lib", "Kpo_4311_Lazarev_Lib\Kpo_4311_Lazarev_Lib.csproj", "{18F0F676-A5C7-4F05-B50A-04D599DF9C22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE7FEFB2-D76B-4961-9BCE-1386500C5517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7FEFB2-D76B-4961-9BCE-1386500C5517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE7FEFB2-D76B-4961-9BCE-1386500C5517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7FEFB2-D76B-4961-9BCE-1386500C5517}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18F0F676-A5C7-4F05-B50A-04D599DF9C22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18F0F676-A5C7-4F05-B50A-04D599DF9C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18F0F676-A5C7-4F05-B50A-04D599DF9C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18F0F676-A5C7-4F05-B50A-04D599DF9C22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13BF7C1C-B877-47CC-AB45-B4AE1167B547}
+	EndGlobalSection
+EndGlobal

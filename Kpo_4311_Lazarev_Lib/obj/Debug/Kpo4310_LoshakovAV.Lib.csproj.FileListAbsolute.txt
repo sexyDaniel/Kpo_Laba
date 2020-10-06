@@ -1,0 +1,11 @@
+C:\Users\aleksandrvasilevic\Documents\Visual Studio 2019\KPO\Laba1\Kpo4310_LoshakovAV\Kpo4310_LoshakovAV.Lib\bin\Debug\Kpo4310_LoshakovAV.Lib.dll
+C:\Users\aleksandrvasilevic\Documents\Visual Studio 2019\KPO\Laba1\Kpo4310_LoshakovAV\Kpo4310_LoshakovAV.Lib\bin\Debug\Kpo4310_LoshakovAV.Lib.pdb
+C:\Users\aleksandrvasilevic\Documents\Visual Studio 2019\KPO\Laba1\Kpo4310_LoshakovAV\Kpo4310_LoshakovAV.Lib\obj\Debug\Kpo4310_LoshakovAV.Lib.csprojAssemblyReference.cache
+C:\Users\aleksandrvasilevic\Documents\Visual Studio 2019\KPO\Laba1\Kpo4310_LoshakovAV\Kpo4310_LoshakovAV.Lib\obj\Debug\Kpo4310_LoshakovAV.Lib.dll
+C:\Users\aleksandrvasilevic\Documents\Visual Studio 2019\KPO\Laba1\Kpo4310_LoshakovAV\Kpo4310_LoshakovAV.Lib\obj\Debug\Kpo4310_LoshakovAV.Lib.pdb
+C:\Users\Acer\Desktop\Kpo4310_LoshakovAV\Kpo4310_LoshakovAV.Lib\bin\Debug\Kpo4310_LoshakovAV.Lib.dll
+C:\Users\Acer\Desktop\Kpo4310_LoshakovAV\Kpo4310_LoshakovAV.Lib\bin\Debug\Kpo4310_LoshakovAV.Lib.pdb
+C:\Users\Acer\Desktop\Kpo4310_LoshakovAV\Kpo4310_LoshakovAV.Lib\obj\Debug\Kpo4310_LoshakovAV.Lib.csprojAssemblyReference.cache
+C:\Users\Acer\Desktop\Kpo4310_LoshakovAV\Kpo4310_LoshakovAV.Lib\obj\Debug\Kpo4310_LoshakovAV.Lib.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Desktop\Kpo4310_LoshakovAV\Kpo4310_LoshakovAV.Lib\obj\Debug\Kpo4310_LoshakovAV.Lib.dll
+C:\Users\Acer\Desktop\Kpo4310_LoshakovAV\Kpo4310_LoshakovAV.Lib\obj\Debug\Kpo4310_LoshakovAV.Lib.pdb
