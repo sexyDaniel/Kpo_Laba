@@ -22,10 +22,11 @@ namespace SpectralClassOfStars
 
         public void SetSpectralClass(SpectralClass spectralClass)
         {
-            //инициализировать скрытое поля класса
             SpectralClass = spectralClass;
-            //присвоить значение данных сотрудника элементам редактирования
             SpectralClassTextBox.Text = SpectralClass.SpectralClassName;
+            MassOfSunTextBox.Text = SpectralClass.MassOfTheSun.ToString();
+            CountTextBox.Text = SpectralClass.Count.ToString();
+            PartTextBox.Text = SpectralClass.Part.ToString();
         }
 
         private void SpectralClassTextBox_TextChanged(object sender, EventArgs e)

@@ -24,11 +24,10 @@ namespace SpectralClassOfStars
         {
             try
             {
-                IStarsListLoader loader = new SeedData();
+                ISpectralClassListLoader loader = AppGlobalSettings.SpectralClassFactory.CraeteSpectralClassListLoader();
                 loader.Execute();
-                //IStarsListLoader loader = new SpectralClassListSplitFileLoader(AppGlobalSettings.DataFileName);
-                //loader.Execute();
-                bsSpectralClass.DataSource = loader.StarsList;
+                spectralClasses = loader.StarsList;
+                bsSpectralClass.DataSource = spectralClasses;
                 dvgSpectralClass.DataSource = bsSpectralClass;
             }
             catch (NotImplementedException ex)
@@ -66,6 +65,23 @@ namespace SpectralClassOfStars
         private void ExitFile_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void SaveMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (spectralClasses == null || spectralClasses.Count == 0)
+                    throw new Exception("Table is Empty");
+                ISpectralClassListSaver listSaver = AppGlobalSettings.SpectralClassFactory.CraeteSpectralClassListSaver();
+                listSaver.StarsList = spectralClasses;
+                listSaver.Execute();
+            }
+            catch(Exception exeption)
+            {
+                MessageBox.Show("Error:" + exeption.Message);
+                LogUtility.ErrorLog("Exeptio" + exeption.Message);
+            }
         }
     }
 }

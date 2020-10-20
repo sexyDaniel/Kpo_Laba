@@ -1,27 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 
 namespace Kpo_4311_Lazarev_lib
 {
-    public enum LoadStatus
-    {
-        None = 0,
-        Success = 1,
-        FileNameIsEmpty = -1,
-        FileNotExists = -2,
-        GeneralError = -100
-    }
-    public class SpectralClassListSplitFileLoader : IStarsListLoader
+    public class SpectralClassSplitFileLoader : ISpectralClassListLoader
     {
         private readonly string fileName = "";
+        public List<SpectralClass> StarsList { get; private set; }
         public LoadStatus Status { get; private set; } = LoadStatus.None;
-        public List<SpectralClass> StarsList { get; private set; } = null;
 
-        public SpectralClassListSplitFileLoader(string fileName)
+        public SpectralClassSplitFileLoader(string fileName)
         {
             this.fileName = fileName;
         }

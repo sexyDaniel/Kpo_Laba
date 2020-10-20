@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Kpo_4311_Lazarev_lib
 {
-    public class SeedData:IStarsListLoader
+    public class SpectralClassSeedDataLoader : ISpectralClassListLoader
     {
         public List<SpectralClass> StarsList { get; private set; }
-        public SeedData()
+        public LoadStatus Status { get; private set; }= LoadStatus.None;
+
+        public SpectralClassSeedDataLoader()
         {
             StarsList = new List<SpectralClass>();
         }
@@ -17,13 +19,13 @@ namespace Kpo_4311_Lazarev_lib
         public void Execute()
         {
             StarsList.Add(
-                new SpectralClass
-                {
-                    SpectralClassName = "O",
-                    MassOfTheSun = 32,
-                    Count = 55000,
-                    Part = 0.00002
-                });
+               new SpectralClass
+               {
+                   SpectralClassName = "O",
+                   MassOfTheSun = 32,
+                   Count = 55000,
+                   Part = 0.00002
+               });
             StarsList.Add(
                 new SpectralClass
                 {
@@ -40,6 +42,7 @@ namespace Kpo_4311_Lazarev_lib
                    Count = 12000000,
                    Part = 1.2
                });
+            Status = LoadStatus.Success;
         }
-    } 
+    }
 }

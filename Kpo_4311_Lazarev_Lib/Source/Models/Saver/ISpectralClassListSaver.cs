@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Kpo_4311_Lazarev_lib
 {
-    public interface IStarsListLoader
+    public interface ISpectralClassListSaver
     {
-        List<SpectralClass> StarsList { get; }
+        List<SpectralClass> StarsList { set; }
+        LoadStatus Status { get; }
         void Execute();
     }
 }
