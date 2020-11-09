@@ -16,3 +16,8 @@ C:\Users\Acer\Desktop\Kpo_4311_Lazarev\Kpo_4311_Lazarev_Lib\obj\Debug\Kpo_4311_L
 C:\Users\Acer\Desktop\Kpo_4311_Lazarev\Kpo_4311_Lazarev_Lib\obj\Debug\Kpo_4311_Lazarev_lib.pdb
 C:\Users\Acer\Desktop\Kpo_4311_Lazarev\Kpo4310_LoshakovAV.Lib\obj\Debug\Kpo_4311_Lazarev_Lib.csprojAssemblyReference.cache
 C:\Users\Acer\Desktop\Kpo_4311_Lazarev\Kpo_4311_Lazarev_Lib\obj\Debug\Kpo_4311_Lazarev_Lib.csprojAssemblyReference.cache
+C:\Users\Acer\Desktop\Kpo_4311_Lazarev\Kpo_4311_Lazarev_Lib\bin\Debug\Castle.Core.dll
+C:\Users\Acer\Desktop\Kpo_4311_Lazarev\Kpo_4311_Lazarev_Lib\bin\Debug\Castle.Windsor.dll
+C:\Users\Acer\Desktop\Kpo_4311_Lazarev\Kpo_4311_Lazarev_Lib\bin\Debug\Castle.Core.xml
+C:\Users\Acer\Desktop\Kpo_4311_Lazarev\Kpo_4311_Lazarev_Lib\bin\Debug\Castle.Windsor.xml
+C:\Users\Acer\Desktop\Kpo_4311_Lazarev\Kpo_4311_Lazarev_Lib\obj\Debug\Kpo_4311_Lazarev_Lib.csproj.CopyComplete

@@ -8,34 +8,28 @@ using System.Windows.Forms;
 
 namespace Kpo_4311_Lazarev_lib
 {
-    public class SpectralClassSplitListSaver : ISpectralClassListSaver
+    public class SpectralClassListSaver : IRepositorySaver
     {
-        private readonly string fileName;
-        public List<SpectralClass> StarsList { private get; set; }
+        public string FileName { get; set; }
+        public List<SpectralClass> StarsList { get; set; }
         public LoadStatus Status { get; private set; } = LoadStatus.None;
-
-        public SpectralClassSplitListSaver(string fileName)
-        {
-            StarsList = null;
-            this.fileName = fileName; 
-        }
 
         public void Execute()
         {
-            if (fileName == "")
+            if (FileName == "")
             {
                 Status = LoadStatus.FileNameIsEmpty;
                 throw new Exception("File name is empty");
             }
-            if (fileName == null)
+            if (FileName == null)
             {
                 Status = LoadStatus.NoData;
                 throw new Exception("No Data");
             }
 
-            using (StreamWriter writer = new StreamWriter(fileName,false))
+            using (StreamWriter writer = new StreamWriter(FileName, false))
             {
-                if(StarsList.Count!=0)
+                if (StarsList.Count != 0)
                 {
                     for (int i = 0; i < StarsList.Count; i++)
                     {

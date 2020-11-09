@@ -54,7 +54,6 @@
             this.MassOfSunTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MassOfSunTextBox.Location = new System.Drawing.Point(17, 95);
             this.MassOfSunTextBox.Name = "MassOfSunTextBox";
-            this.MassOfSunTextBox.ReadOnly = true;
             this.MassOfSunTextBox.Size = new System.Drawing.Size(304, 30);
             this.MassOfSunTextBox.TabIndex = 1;
             // 

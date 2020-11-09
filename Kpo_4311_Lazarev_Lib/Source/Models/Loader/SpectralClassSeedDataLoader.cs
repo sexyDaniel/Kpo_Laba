@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Kpo_4311_Lazarev_lib
 {
-    public class SpectralClassSeedDataLoader : ISpectralClassListLoader
+    public class SpectralClassSeedDataLoader : IRepositoryLoader
     {
+        public string FileName { get; set ; }
         public List<SpectralClass> StarsList { get; private set; }
         public LoadStatus Status { get; private set; }= LoadStatus.None;
 

@@ -7,10 +7,11 @@ using System.Windows.Forms;
 
 namespace Kpo_4311_Lazarev_lib
 {
-    public class SpectralClassSeedDataSaver : ISpectralClassListSaver
+    public class SpectralClassSeedDataSaver : IRepositorySaver
     {
         public List<SpectralClass> StarsList { private get; set; }
         public LoadStatus Status { get; private set; } = LoadStatus.None;
+        public string FileName { get; set; }
 
         public SpectralClassSeedDataSaver()
         {

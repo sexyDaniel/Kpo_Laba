@@ -7,33 +7,29 @@ using System.Threading.Tasks;
 
 namespace Kpo_4311_Lazarev_lib
 {
-    public class SpectralClassSplitFileLoader : ISpectralClassListLoader
+    public class SpectralClassListLoader : IRepositoryLoader
     {
-        private readonly string fileName = "";
+        public string FileName { get; set; }
         public List<SpectralClass> StarsList { get; private set; }
         public LoadStatus Status { get; private set; } = LoadStatus.None;
 
-        public SpectralClassSplitFileLoader(string fileName)
-        {
-            this.fileName = fileName;
-        }
 
         public void Execute()
         {
             Status = LoadStatus.None;
-            if (fileName == "")
+            if (FileName == "")
             {
                 Status = LoadStatus.FileNameIsEmpty;
                 throw new Exception("File name is empty");
             }
 
-            if (!File.Exists(fileName))
+            if (!File.Exists(FileName))
             {
                 Status = LoadStatus.FileNotExists;
                 throw new Exception("File not found");
             }
 
-            using (StreamReader reader = new StreamReader(fileName))
+            using (StreamReader reader = new StreamReader(FileName))
             {
                 while (!reader.EndOfStream)
                 {

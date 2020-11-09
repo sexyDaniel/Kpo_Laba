@@ -24,7 +24,8 @@ namespace SpectralClassOfStars
         {
             try
             {
-                ISpectralClassListLoader loader = AppGlobalSettings.SpectralClassFactory.CraeteSpectralClassListLoader();
+                IRepositoryLoader loader = CastleFactory.Container.Resolve<IRepositoryLoader>();
+                loader.FileName = AppGlobalSettings.DataFileName;
                 loader.Execute();
                 spectralClasses = loader.StarsList;
                 bsSpectralClass.DataSource = spectralClasses;
@@ -73,8 +74,9 @@ namespace SpectralClassOfStars
             {
                 if (spectralClasses == null || spectralClasses.Count == 0)
                     throw new Exception("Table is Empty");
-                ISpectralClassListSaver listSaver = AppGlobalSettings.SpectralClassFactory.CraeteSpectralClassListSaver();
+                IRepositorySaver listSaver = CastleFactory.Container.Resolve<IRepositorySaver>();
                 listSaver.StarsList = spectralClasses;
+                listSaver.FileName = AppGlobalSettings.DataFileName;
                 listSaver.Execute();
             }
             catch(Exception exeption)

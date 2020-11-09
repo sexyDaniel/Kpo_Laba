@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Kpo_4311_Lazarev_lib
 {
-    public interface ISpectralClassListLoader
+    public interface IRepositoryLoader
     {
-        List<SpectralClass> StarsList { get; }
-        LoadStatus Status { get; } 
+        string FileName { get; set; }
+        List<SpectralClass> StarsList { get;}
+        LoadStatus Status { get; }
         void Execute();
     }
 }
