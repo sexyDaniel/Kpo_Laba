@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.AddStar = new System.Windows.Forms.Button();
             this.Edit = new System.Windows.Forms.Button();
+            this.Delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SpectralClassTextBox
@@ -153,11 +154,22 @@
             this.Edit.UseVisualStyleBackColor = true;
             this.Edit.Click += new System.EventHandler(this.Edit_Click);
             // 
+            // Delete
+            // 
+            this.Delete.Location = new System.Drawing.Point(179, 258);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(75, 23);
+            this.Delete.TabIndex = 12;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
             // StarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(757, 415);
+            this.Controls.Add(this.Delete);
             this.Controls.Add(this.Edit);
             this.Controls.Add(this.AddStar);
             this.Controls.Add(this.label3);
@@ -171,6 +183,7 @@
             this.Controls.Add(this.MassOfSunTextBox);
             this.Controls.Add(this.SpectralClassTextBox);
             this.Name = "StarForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "StarForm";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -187,8 +200,9 @@
         private System.Windows.Forms.Label CountLable;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        protected internal System.Windows.Forms.Button AddStar;
-        protected internal System.Windows.Forms.Button Edit;
         protected internal System.Windows.Forms.TextBox SpectralClassTextBox;
+        public System.Windows.Forms.Button Delete;
+        public System.Windows.Forms.Button AddStar;
+        public System.Windows.Forms.Button Edit;
     }
 }

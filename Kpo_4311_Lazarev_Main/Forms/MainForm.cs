@@ -18,6 +18,11 @@ namespace SpectralClassOfStars
         public MainForm()
         {
             InitializeComponent();
+            openStar.Enabled = false;
+            AddStarClass.Enabled = false;
+            SearchSpectralClass.Enabled = false;
+            DeleteStarClass.Enabled = false;
+            EditStarClass.Enabled = false;
         }
 
         private void OpenFile_Click(object sender, EventArgs e)
@@ -30,6 +35,7 @@ namespace SpectralClassOfStars
                 repo.StarsList = loader.StarsList;
                 bsSpectralClass.DataSource = repo.StarsList;
                 dvgSpectralClass.DataSource = bsSpectralClass;
+                ActivateMenu();
             }
             catch (NotImplementedException ex)
             {
@@ -90,42 +96,56 @@ namespace SpectralClassOfStars
         {
             StarForm starForm = new StarForm();
             starForm.repo = repo;
-            starForm.AddStar.Visible = true;
+            starForm.AddStar.Enabled = true;
+            starForm.Delete.Enabled = false;
+            starForm.Edit.Enabled = false;
             starForm.ShowDialog();
-            bsSpectralClass.DataSource = repo.StarsList;
-            bsSpectralClass.ResetBindings(true);
-            dvgSpectralClass.DataSource = bsSpectralClass;
+            Reload();
         }
 
         private void DeleteStarClass_Click(object sender, EventArgs e)
         {
             var spectralClass = bsSpectralClass.Current as SpectralClass;
             repo.Delete(spectralClass.SpectralClassName);
+            Reload();
+        }
+
+        private void EditStarClass_Click(object sender, EventArgs e)
+        {
+            StarForm starForm = new StarForm();
+            var spectralClass = bsSpectralClass.Current as SpectralClass;
+            starForm.SetSpectralClass(spectralClass);
+            starForm.SpectralClassTextBox.ReadOnly = true;
+            starForm.Delete.Enabled = false;
+            starForm.AddStar.Enabled = false;
+            starForm.Edit.Enabled = true;
+            starForm.repo = repo;
+            starForm.ShowDialog();
+            Reload();
+        }
+
+        private void SearchSpectralClass_Click(object sender, EventArgs e)
+        {
+            SearchForm searchForm = new SearchForm();
+            searchForm.repo = repo;
+            searchForm.ShowDialog();
+            Reload();
+        }
+
+        private void Reload()
+        {
             bsSpectralClass.DataSource = repo.StarsList;
             bsSpectralClass.ResetBindings(true);
             dvgSpectralClass.DataSource = bsSpectralClass;
         }
 
-        private void EditStarClass_Click(object sender, EventArgs e)
+        private void ActivateMenu()
         {
-            try
-            {
-                StarForm starForm = new StarForm();
-                var spectralClass = bsSpectralClass.Current as SpectralClass;
-                starForm.SetSpectralClass(spectralClass);
-                starForm.SpectralClassTextBox.ReadOnly = true;
-                starForm.Edit.Visible = true;
-                starForm.repo = repo;
-                starForm.ShowDialog();
-                bsSpectralClass.DataSource = repo.StarsList;
-                bsSpectralClass.ResetBindings(true);
-                dvgSpectralClass.DataSource = bsSpectralClass;
-            }
-            catch(Exception exeption)
-            {
-                MessageBox.Show("Error:" + exeption.Message);
-                LogUtility.ErrorLog("Exeptio" + exeption.Message);
-            }
+            openStar.Enabled = true;
+            AddStarClass.Enabled = true;
+            SearchSpectralClass.Enabled = true;
+            DeleteStarClass.Enabled = true;
+            EditStarClass.Enabled = true;
         }
     }
 }

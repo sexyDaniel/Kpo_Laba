@@ -38,6 +38,7 @@
             this.AddStarClass = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteStarClass = new System.Windows.Forms.ToolStripMenuItem();
             this.EditStarClass = new System.Windows.Forms.ToolStripMenuItem();
+            this.SearchSpectralClass = new System.Windows.Forms.ToolStripMenuItem();
             this.SStrip = new System.Windows.Forms.StatusStrip();
             this.dvgSpectralClass = new System.Windows.Forms.DataGridView();
             this.MainMenu.SuspendLayout();
@@ -93,7 +94,8 @@
             this.openStar,
             this.AddStarClass,
             this.DeleteStarClass,
-            this.EditStarClass});
+            this.EditStarClass,
+            this.SearchSpectralClass});
             this.starsToolStripMenuItem.Name = "starsToolStripMenuItem";
             this.starsToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.starsToolStripMenuItem.Text = "Stars";
@@ -126,6 +128,13 @@
             this.EditStarClass.Text = "Edit StarClass";
             this.EditStarClass.Click += new System.EventHandler(this.EditStarClass_Click);
             // 
+            // SearchSpectralClass
+            // 
+            this.SearchSpectralClass.Name = "SearchSpectralClass";
+            this.SearchSpectralClass.Size = new System.Drawing.Size(216, 26);
+            this.SearchSpectralClass.Text = "Search StarClass";
+            this.SearchSpectralClass.Click += new System.EventHandler(this.SearchSpectralClass_Click);
+            // 
             // SStrip
             // 
             this.SStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -154,6 +163,7 @@
             this.Controls.Add(this.MainMenu);
             this.MainMenuStrip = this.MainMenu;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
@@ -177,5 +187,6 @@
         private System.Windows.Forms.ToolStripMenuItem AddStarClass;
         private System.Windows.Forms.ToolStripMenuItem DeleteStarClass;
         private System.Windows.Forms.ToolStripMenuItem EditStarClass;
+        private System.Windows.Forms.ToolStripMenuItem SearchSpectralClass;
     }
 }

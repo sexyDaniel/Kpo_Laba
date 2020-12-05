@@ -17,8 +17,8 @@ namespace Kpo_4311_Lazarev_lib
         public void Add(SpectralClass spectralClass)
         {
             SpectralClass check = StarsList.FirstOrDefault(sp => sp.SpectralClassName == spectralClass.SpectralClassName);
-            if (check == null)
-                throw new Exception("Такой спектральный класс уже есть");
+            if (check != null)
+                throw new AddSpectralClassException("Такой спектральный класс уже есть");
             StarsList.Add(spectralClass);
         }
 
@@ -39,6 +39,14 @@ namespace Kpo_4311_Lazarev_lib
             editSpectralClass.Part = spectralClass.Part;
             editSpectralClass.MassOfTheSun = spectralClass.MassOfTheSun;
             editSpectralClass.Count = spectralClass.Count;
+        }
+
+        public SpectralClass SearchSpectralClass(string spectralClassName)
+        {
+            SpectralClass spectralClass = StarsList.FirstOrDefault(sp => sp.SpectralClassName == spectralClassName);
+            if (spectralClass == null)
+                throw new SearchSpectralClassExeption("Такого спектрального класса нет");
+            return spectralClass;
         }
     }
 }

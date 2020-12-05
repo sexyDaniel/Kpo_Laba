@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\Common\AppGlobalSettings.cs" />
+    <Compile Include="Source\MyExceptions\AddSpectralClassException.cs" />
     <Compile Include="Source\Models\CastleWinsdor\CastleFactory.cs" />
     <Compile Include="Source\Models\ISpectralClassRepository.cs" />
     <Compile Include="Source\Models\Loader\IRepositoryLoader.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Source\Models\SpectralClass.cs" />
     <Compile Include="Source\Log\LogUtility.cs" />
     <Compile Include="Source\Models\SpectralClassRepository.cs" />
+    <Compile Include="Source\MyExceptions\SearchSpectralClassExeption.cs" />
     <Compile Include="Source\Utility\AppConfigUtility.cs" />
   </ItemGroup>
   <ItemGroup>

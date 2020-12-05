@@ -19,8 +19,6 @@ namespace SpectralClassOfStars
         {
             InitializeComponent();
             SpectralClass = null;
-            AddStar.Visible = false;
-            Edit.Visible = false;
         }
 
         public void SetSpectralClass(SpectralClass spectralClass)
@@ -50,10 +48,15 @@ namespace SpectralClassOfStars
                 MessageBox.Show("Вы добавили новый спектральный класс");
                 Close();
             }
-            catch(Exception exeption)
+            catch (AddSpectralClassException exeption)
             {
                 MessageBox.Show("Error:" + exeption.Message);
                 LogUtility.ErrorLog("Exeptio" + exeption.Message);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Error:" + exception.Message);
+                LogUtility.ErrorLog("Exeptio" + exception.Message);
             }
         }
 
@@ -69,6 +72,21 @@ namespace SpectralClassOfStars
                 Close();
             }
             catch(Exception exeption)
+            {
+                MessageBox.Show("Error:" + exeption.Message);
+                LogUtility.ErrorLog("Exeptio" + exeption.Message);
+            }
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                repo.Delete(SpectralClassTextBox.Text);
+                MessageBox.Show("Вы удалили Спектральный класс " + SpectralClass.SpectralClassName);
+                Close();
+            }
+            catch (Exception exeption)
             {
                 MessageBox.Show("Error:" + exeption.Message);
                 LogUtility.ErrorLog("Exeptio" + exeption.Message);

@@ -40,7 +40,15 @@ namespace UnitTestSpectralClass
         public void AddExistentSpectralClass()
         {
             Initialize();
-            Assert.ThrowsException<Exception>(()=>spectralClasses.Add(new SpectralClass { SpectralClassName = "O", MassOfTheSun = 123, Part = 45, Count = 10909 }));
+            Assert.ThrowsException<AddSpectralClassException>(()=>spectralClasses.Add(new SpectralClass { SpectralClassName = "O", MassOfTheSun = 123, Part = 45, Count = 10909 }));
+        }
+
+
+        [TestMethod]
+        public void SearchException()
+        {
+            Initialize();
+            Assert.ThrowsException<SearchSpectralClassExeption>(() => spectralClasses.SearchSpectralClass("Z"));
         }
 
         [TestMethod]
