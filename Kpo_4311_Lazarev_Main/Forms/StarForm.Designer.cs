@@ -38,6 +38,8 @@
             this.CountLable = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.AddStar = new System.Windows.Forms.Button();
+            this.Edit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SpectralClassTextBox
@@ -131,11 +133,33 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Mass of Sun";
             // 
+            // AddStar
+            // 
+            this.AddStar.Location = new System.Drawing.Point(17, 258);
+            this.AddStar.Name = "AddStar";
+            this.AddStar.Size = new System.Drawing.Size(75, 23);
+            this.AddStar.TabIndex = 10;
+            this.AddStar.Text = "Add";
+            this.AddStar.UseVisualStyleBackColor = true;
+            this.AddStar.Click += new System.EventHandler(this.AddStar_Click);
+            // 
+            // Edit
+            // 
+            this.Edit.Location = new System.Drawing.Point(98, 258);
+            this.Edit.Name = "Edit";
+            this.Edit.Size = new System.Drawing.Size(75, 23);
+            this.Edit.TabIndex = 11;
+            this.Edit.Text = "Edit";
+            this.Edit.UseVisualStyleBackColor = true;
+            this.Edit.Click += new System.EventHandler(this.Edit_Click);
+            // 
             // StarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(757, 415);
+            this.Controls.Add(this.Edit);
+            this.Controls.Add(this.AddStar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CountLable);
@@ -154,8 +178,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox SpectralClassTextBox;
         private System.Windows.Forms.TextBox MassOfSunTextBox;
         private System.Windows.Forms.TextBox PartTextBox;
         private System.Windows.Forms.TextBox CountTextBox;
@@ -165,5 +187,8 @@
         private System.Windows.Forms.Label CountLable;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        protected internal System.Windows.Forms.Button AddStar;
+        protected internal System.Windows.Forms.Button Edit;
+        protected internal System.Windows.Forms.TextBox SpectralClassTextBox;
     }
 }

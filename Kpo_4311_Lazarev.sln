@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kpo_4311_Lazarev_Main", "Kp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kpo_4311_Lazarev_Lib", "Kpo_4311_Lazarev_Lib\Kpo_4311_Lazarev_Lib.csproj", "{18F0F676-A5C7-4F05-B50A-04D599DF9C22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestSpectralClass", "UnitTestSpectralClass\UnitTestSpectralClass.csproj", "{BBA8486D-BB45-46EC-BE9F-634B8A4D7CC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{18F0F676-A5C7-4F05-B50A-04D599DF9C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18F0F676-A5C7-4F05-B50A-04D599DF9C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18F0F676-A5C7-4F05-B50A-04D599DF9C22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBA8486D-BB45-46EC-BE9F-634B8A4D7CC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBA8486D-BB45-46EC-BE9F-634B8A4D7CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBA8486D-BB45-46EC-BE9F-634B8A4D7CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBA8486D-BB45-46EC-BE9F-634B8A4D7CC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

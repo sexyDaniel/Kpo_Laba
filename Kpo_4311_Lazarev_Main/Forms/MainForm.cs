@@ -13,7 +13,7 @@ namespace SpectralClassOfStars
 {
     public partial class MainForm : Form
     {
-        private List<SpectralClass> spectralClasses;
+        private SpectralClassRepository repo = new SpectralClassRepository();
         private BindingSource bsSpectralClass = new BindingSource();
         public MainForm()
         {
@@ -27,8 +27,8 @@ namespace SpectralClassOfStars
                 IRepositoryLoader loader = CastleFactory.Container.Resolve<IRepositoryLoader>();
                 loader.FileName = AppGlobalSettings.DataFileName;
                 loader.Execute();
-                spectralClasses = loader.StarsList;
-                bsSpectralClass.DataSource = spectralClasses;
+                repo.StarsList = loader.StarsList;
+                bsSpectralClass.DataSource = repo.StarsList;
                 dvgSpectralClass.DataSource = bsSpectralClass;
             }
             catch (NotImplementedException ex)
@@ -72,12 +72,54 @@ namespace SpectralClassOfStars
         {
             try
             {
-                if (spectralClasses == null || spectralClasses.Count == 0)
+                if (repo.StarsList == null || repo.StarsList.Count == 0)
                     throw new Exception("Table is Empty");
                 IRepositorySaver listSaver = CastleFactory.Container.Resolve<IRepositorySaver>();
-                listSaver.StarsList = spectralClasses;
+                listSaver.StarsList = repo.StarsList;
                 listSaver.FileName = AppGlobalSettings.DataFileName;
                 listSaver.Execute();
+            }
+            catch(Exception exeption)
+            {
+                MessageBox.Show("Error:" + exeption.Message);
+                LogUtility.ErrorLog("Exeptio" + exeption.Message);
+            }
+        }
+
+        private void AddStarClass_Click(object sender, EventArgs e)
+        {
+            StarForm starForm = new StarForm();
+            starForm.repo = repo;
+            starForm.AddStar.Visible = true;
+            starForm.ShowDialog();
+            bsSpectralClass.DataSource = repo.StarsList;
+            bsSpectralClass.ResetBindings(true);
+            dvgSpectralClass.DataSource = bsSpectralClass;
+        }
+
+        private void DeleteStarClass_Click(object sender, EventArgs e)
+        {
+            var spectralClass = bsSpectralClass.Current as SpectralClass;
+            repo.Delete(spectralClass.SpectralClassName);
+            bsSpectralClass.DataSource = repo.StarsList;
+            bsSpectralClass.ResetBindings(true);
+            dvgSpectralClass.DataSource = bsSpectralClass;
+        }
+
+        private void EditStarClass_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                StarForm starForm = new StarForm();
+                var spectralClass = bsSpectralClass.Current as SpectralClass;
+                starForm.SetSpectralClass(spectralClass);
+                starForm.SpectralClassTextBox.ReadOnly = true;
+                starForm.Edit.Visible = true;
+                starForm.repo = repo;
+                starForm.ShowDialog();
+                bsSpectralClass.DataSource = repo.StarsList;
+                bsSpectralClass.ResetBindings(true);
+                dvgSpectralClass.DataSource = bsSpectralClass;
             }
             catch(Exception exeption)
             {

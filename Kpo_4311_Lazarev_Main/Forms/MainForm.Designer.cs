@@ -32,11 +32,14 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OpenFile = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.SaveMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.starsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openStar = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddStarClass = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeleteStarClass = new System.Windows.Forms.ToolStripMenuItem();
+            this.EditStarClass = new System.Windows.Forms.ToolStripMenuItem();
             this.SStrip = new System.Windows.Forms.StatusStrip();
             this.dvgSpectralClass = new System.Windows.Forms.DataGridView();
-            this.SaveMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgSpectralClass)).BeginInit();
             this.SuspendLayout();
@@ -66,21 +69,31 @@
             // OpenFile
             // 
             this.OpenFile.Name = "OpenFile";
-            this.OpenFile.Size = new System.Drawing.Size(216, 26);
+            this.OpenFile.Size = new System.Drawing.Size(120, 26);
             this.OpenFile.Text = "Open";
             this.OpenFile.Click += new System.EventHandler(this.OpenFile_Click);
             // 
             // ExitFile
             // 
             this.ExitFile.Name = "ExitFile";
-            this.ExitFile.Size = new System.Drawing.Size(216, 26);
+            this.ExitFile.Size = new System.Drawing.Size(120, 26);
             this.ExitFile.Text = "Exit";
             this.ExitFile.Click += new System.EventHandler(this.ExitFile_Click);
+            // 
+            // SaveMenuItem
+            // 
+            this.SaveMenuItem.Name = "SaveMenuItem";
+            this.SaveMenuItem.Size = new System.Drawing.Size(120, 26);
+            this.SaveMenuItem.Text = "Save";
+            this.SaveMenuItem.Click += new System.EventHandler(this.SaveMenuItem_Click);
             // 
             // starsToolStripMenuItem
             // 
             this.starsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openStar});
+            this.openStar,
+            this.AddStarClass,
+            this.DeleteStarClass,
+            this.EditStarClass});
             this.starsToolStripMenuItem.Name = "starsToolStripMenuItem";
             this.starsToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.starsToolStripMenuItem.Text = "Stars";
@@ -88,9 +101,30 @@
             // openStar
             // 
             this.openStar.Name = "openStar";
-            this.openStar.Size = new System.Drawing.Size(206, 26);
+            this.openStar.Size = new System.Drawing.Size(216, 26);
             this.openStar.Text = "Open Data Of Star";
             this.openStar.Click += new System.EventHandler(this.openStar_Click_1);
+            // 
+            // AddStarClass
+            // 
+            this.AddStarClass.Name = "AddStarClass";
+            this.AddStarClass.Size = new System.Drawing.Size(216, 26);
+            this.AddStarClass.Text = "Add StarClass";
+            this.AddStarClass.Click += new System.EventHandler(this.AddStarClass_Click);
+            // 
+            // DeleteStarClass
+            // 
+            this.DeleteStarClass.Name = "DeleteStarClass";
+            this.DeleteStarClass.Size = new System.Drawing.Size(216, 26);
+            this.DeleteStarClass.Text = "Delete StarClass";
+            this.DeleteStarClass.Click += new System.EventHandler(this.DeleteStarClass_Click);
+            // 
+            // EditStarClass
+            // 
+            this.EditStarClass.Name = "EditStarClass";
+            this.EditStarClass.Size = new System.Drawing.Size(216, 26);
+            this.EditStarClass.Text = "Edit StarClass";
+            this.EditStarClass.Click += new System.EventHandler(this.EditStarClass_Click);
             // 
             // SStrip
             // 
@@ -109,13 +143,6 @@
             this.dvgSpectralClass.RowTemplate.Height = 24;
             this.dvgSpectralClass.Size = new System.Drawing.Size(648, 167);
             this.dvgSpectralClass.TabIndex = 2;
-            // 
-            // SaveMenuItem
-            // 
-            this.SaveMenuItem.Name = "SaveMenuItem";
-            this.SaveMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.SaveMenuItem.Text = "Save";
-            this.SaveMenuItem.Click += new System.EventHandler(this.SaveMenuItem_Click);
             // 
             // MainForm
             // 
@@ -147,5 +174,8 @@
         private System.Windows.Forms.StatusStrip SStrip;
         private System.Windows.Forms.DataGridView dvgSpectralClass;
         private System.Windows.Forms.ToolStripMenuItem SaveMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddStarClass;
+        private System.Windows.Forms.ToolStripMenuItem DeleteStarClass;
+        private System.Windows.Forms.ToolStripMenuItem EditStarClass;
     }
 }
