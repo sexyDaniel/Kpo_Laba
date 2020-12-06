@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -23,15 +24,19 @@ namespace SpectralClassOfStars
             SearchSpectralClass.Enabled = false;
             DeleteStarClass.Enabled = false;
             EditStarClass.Enabled = false;
+            progressBar1.Visible = false;
         }
 
         private void OpenFile_Click(object sender, EventArgs e)
         {
             try
             {
+                progressBar1.Visible = true;
                 IRepositoryLoader loader = CastleFactory.Container.Resolve<IRepositoryLoader>();
                 loader.FileName = AppGlobalSettings.DataFileName;
+                loader.SetDelegate(Progress);
                 loader.Execute();
+                progressBar1.Visible = false;
                 repo.StarsList = loader.StarsList;
                 bsSpectralClass.DataSource = repo.StarsList;
                 dvgSpectralClass.DataSource = bsSpectralClass;
@@ -146,6 +151,19 @@ namespace SpectralClassOfStars
             SearchSpectralClass.Enabled = true;
             DeleteStarClass.Enabled = true;
             EditStarClass.Enabled = true;
+        }
+
+        private void Progress(int count)
+        {
+            progressBar1.Step = count*2;
+            progressBar1.PerformStep();
+            progressBar1.Maximum += count;
+            Thread.Sleep(700);
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

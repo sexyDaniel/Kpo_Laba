@@ -45,5 +45,10 @@ namespace Kpo_4311_Lazarev_lib
                });
             Status = LoadStatus.Success;
         }
+
+        public void SetDelegate(OnLoadFileDelegate del)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

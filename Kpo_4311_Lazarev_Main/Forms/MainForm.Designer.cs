@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OpenFile = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,6 +42,8 @@
             this.SearchSpectralClass = new System.Windows.Forms.ToolStripMenuItem();
             this.SStrip = new System.Windows.Forms.StatusStrip();
             this.dvgSpectralClass = new System.Windows.Forms.DataGridView();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgSpectralClass)).BeginInit();
             this.SuspendLayout();
@@ -103,42 +106,42 @@
             // openStar
             // 
             this.openStar.Name = "openStar";
-            this.openStar.Size = new System.Drawing.Size(216, 26);
+            this.openStar.Size = new System.Drawing.Size(206, 26);
             this.openStar.Text = "Open Data Of Star";
             this.openStar.Click += new System.EventHandler(this.openStar_Click_1);
             // 
             // AddStarClass
             // 
             this.AddStarClass.Name = "AddStarClass";
-            this.AddStarClass.Size = new System.Drawing.Size(216, 26);
+            this.AddStarClass.Size = new System.Drawing.Size(206, 26);
             this.AddStarClass.Text = "Add StarClass";
             this.AddStarClass.Click += new System.EventHandler(this.AddStarClass_Click);
             // 
             // DeleteStarClass
             // 
             this.DeleteStarClass.Name = "DeleteStarClass";
-            this.DeleteStarClass.Size = new System.Drawing.Size(216, 26);
+            this.DeleteStarClass.Size = new System.Drawing.Size(206, 26);
             this.DeleteStarClass.Text = "Delete StarClass";
             this.DeleteStarClass.Click += new System.EventHandler(this.DeleteStarClass_Click);
             // 
             // EditStarClass
             // 
             this.EditStarClass.Name = "EditStarClass";
-            this.EditStarClass.Size = new System.Drawing.Size(216, 26);
+            this.EditStarClass.Size = new System.Drawing.Size(206, 26);
             this.EditStarClass.Text = "Edit StarClass";
             this.EditStarClass.Click += new System.EventHandler(this.EditStarClass_Click);
             // 
             // SearchSpectralClass
             // 
             this.SearchSpectralClass.Name = "SearchSpectralClass";
-            this.SearchSpectralClass.Size = new System.Drawing.Size(216, 26);
+            this.SearchSpectralClass.Size = new System.Drawing.Size(206, 26);
             this.SearchSpectralClass.Text = "Search StarClass";
             this.SearchSpectralClass.Click += new System.EventHandler(this.SearchSpectralClass_Click);
             // 
             // SStrip
             // 
             this.SStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.SStrip.Location = new System.Drawing.Point(0, 472);
+            this.SStrip.Location = new System.Drawing.Point(0, 471);
             this.SStrip.Name = "SStrip";
             this.SStrip.Size = new System.Drawing.Size(1032, 22);
             this.SStrip.TabIndex = 1;
@@ -147,17 +150,27 @@
             // dvgSpectralClass
             // 
             this.dvgSpectralClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgSpectralClass.Location = new System.Drawing.Point(12, 302);
+            this.dvgSpectralClass.Location = new System.Drawing.Point(12, 272);
             this.dvgSpectralClass.Name = "dvgSpectralClass";
             this.dvgSpectralClass.RowTemplate.Height = 24;
             this.dvgSpectralClass.Size = new System.Drawing.Size(648, 167);
             this.dvgSpectralClass.TabIndex = 2;
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(12, 445);
+            this.progressBar1.Maximum = 10;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(648, 23);
+            this.progressBar1.TabIndex = 3;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1032, 494);
+            this.ClientSize = new System.Drawing.Size(1032, 493);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.dvgSpectralClass);
             this.Controls.Add(this.SStrip);
             this.Controls.Add(this.MainMenu);
@@ -188,5 +201,7 @@
         private System.Windows.Forms.ToolStripMenuItem DeleteStarClass;
         private System.Windows.Forms.ToolStripMenuItem EditStarClass;
         private System.Windows.Forms.ToolStripMenuItem SearchSpectralClass;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }

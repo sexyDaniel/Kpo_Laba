@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 
 namespace Kpo_4311_Lazarev_lib
 {
+    public delegate void OnLoadFileDelegate(int count);
     public class SpectralClassListLoader : IRepositoryLoader
     {
         public string FileName { get; set; }
         public List<SpectralClass> StarsList { get; private set; }
         public LoadStatus Status { get; private set; } = LoadStatus.None;
+        public OnLoadFileDelegate OnLoadFile { get; set; }
 
+        public void SetDelegate(OnLoadFileDelegate del) => OnLoadFile = del;
 
         public void Execute()
         {
@@ -47,6 +50,7 @@ namespace Kpo_4311_Lazarev_lib
                                 Part = double.Parse(arr[2]),
                                 Count = long.Parse(arr[3])
                             });
+                        OnLoadFile?.Invoke(StarsList.Count);
                     }
                     catch (Exception ex)
                     {

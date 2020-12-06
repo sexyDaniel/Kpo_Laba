@@ -11,6 +11,7 @@ namespace Kpo_4311_Lazarev_lib
         string FileName { get; set; }
         List<SpectralClass> StarsList { get;}
         LoadStatus Status { get; }
+        void SetDelegate(OnLoadFileDelegate del);
         void Execute();
     }
 }
