@@ -32,7 +32,7 @@ namespace UnitTestSpectralClass
         {
             Initialize();
             var count = spectralClasses.StarsList.Count;
-            spectralClasses.Add(new SpectralClass {SpectralClassName="C",MassOfTheSun=123,Part=45,Count=10909 });
+            spectralClasses.Add(new SpectralClass {SpectralClassName="O",MassOfTheSun=123,Part=45,Count=10909 });
             Assert.AreNotEqual(spectralClasses.StarsList.Count, count);
         }
 
@@ -40,7 +40,7 @@ namespace UnitTestSpectralClass
         public void AddExistentSpectralClass()
         {
             Initialize();
-            Assert.ThrowsException<AddSpectralClassException>(()=>spectralClasses.Add(new SpectralClass { SpectralClassName = "O", MassOfTheSun = 123, Part = 45, Count = 10909 }));
+            Assert.ThrowsException<AddSpectralClassException>(() => spectralClasses.Add(new SpectralClass { SpectralClassName = "A", MassOfTheSun = 123, Part = 45, Count = 10909 }));
         }
 
 
@@ -56,7 +56,7 @@ namespace UnitTestSpectralClass
         {
             Initialize();
             var count = spectralClasses.StarsList.Count;
-            spectralClasses.Delete("O");
+            spectralClasses.Delete("A");
             Assert.AreNotEqual(count, spectralClasses.StarsList.Count);
         }
 
@@ -72,11 +72,11 @@ namespace UnitTestSpectralClass
         {
             Initialize();
             var count = spectralClasses.StarsList.Count;
-            spectralClasses.Edit(new SpectralClass { SpectralClassName = "O", MassOfTheSun = 123, Part = 45, Count = 10909 });
-            var sc = spectralClasses.StarsList.FirstOrDefault(sp=>sp.SpectralClassName=="O");
+            spectralClasses.Edit(new SpectralClass { SpectralClassName = "A", MassOfTheSun = 123, Part = 45, Count = 10909 });
+            var sc = spectralClasses.StarsList.FirstOrDefault(sp=>sp.SpectralClassName=="A");
             Assert.AreEqual(sc.Count, 10909);
             Assert.AreEqual(sc.MassOfTheSun, 123);
-            Assert.AreEqual(sc.SpectralClassName, "O");
+            Assert.AreEqual(sc.SpectralClassName, "A");
             Assert.AreEqual(sc.Part, 45);
         }
 

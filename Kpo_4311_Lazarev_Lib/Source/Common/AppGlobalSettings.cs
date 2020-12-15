@@ -16,9 +16,9 @@ namespace Kpo_4311_Lazarev_lib
         public static void Initialize()
         {
             var appConfigUtility = new AppConfigUtility();
-            LogPath = appConfigUtility.AppSetting("logPath");
             DataFileName = appConfigUtility.AppSetting("dataFileName");
-            Debug.Assert(DataFileName=="Stars.txt","Неверное имя файла");
+            Debug.Assert(DataFileName == "Stars.txt", "Неверное имя файла");
+            LogPath = appConfigUtility.AppSetting("logPath");
             Mode = appConfigUtility.AppSetting("Factory");
         }
     }

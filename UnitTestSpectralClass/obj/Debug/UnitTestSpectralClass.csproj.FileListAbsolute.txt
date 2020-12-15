@@ -24,3 +24,4 @@ C:\Users\Acer\Desktop\Kpo_4311_Lazarev\UnitTestSpectralClass\obj\Debug\UnitTestS
 C:\Users\Acer\Desktop\Kpo_4311_Lazarev\UnitTestSpectralClass\obj\Debug\UnitTestSpectralClass.csproj.CopyComplete
 C:\Users\Acer\Desktop\Kpo_4311_Lazarev\UnitTestSpectralClass\obj\Debug\UnitTestSpectralClass.dll
 C:\Users\Acer\Desktop\Kpo_4311_Lazarev\UnitTestSpectralClass\obj\Debug\UnitTestSpectralClass.pdb
+C:\Users\Acer\Desktop\Kpo_4311_Lazarev\UnitTestSpectralClass\bin\Debug\UnitTestSpectralClass.dll.config

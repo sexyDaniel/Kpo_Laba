@@ -50,7 +50,7 @@ namespace Kpo_4311_Lazarev_lib
                                 Part = double.Parse(arr[2]),
                                 Count = long.Parse(arr[3])
                             });
-                        OnLoadFile?.Invoke(StarsList.Count);
+                        //OnLoadFile?.Invoke(StarsList.Count);
                     }
                     catch (Exception ex)
                     {
