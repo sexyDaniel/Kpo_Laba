@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Kpo_4311_Lazarev_lib
@@ -50,7 +51,7 @@ namespace Kpo_4311_Lazarev_lib
                                 Part = double.Parse(arr[2]),
                                 Count = long.Parse(arr[3])
                             });
-                        //OnLoadFile?.Invoke(StarsList.Count);
+                        OnLoadFile?.Invoke(StarsList.Count);
                     }
                     catch (Exception ex)
                     {

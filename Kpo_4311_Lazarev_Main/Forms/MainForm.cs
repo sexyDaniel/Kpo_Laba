@@ -28,15 +28,17 @@ namespace SpectralClassOfStars
             SortByMassOfSun.Enabled = false;
         }
 
-        private void OpenFile_Click(object sender, EventArgs e)
+        private async void OpenFile_Click(object sender, EventArgs e)
         {
             try
             {
                 progressBar1.Visible = true;
                 IRepositoryLoader loader = CastleFactory.Container.Resolve<IRepositoryLoader>();
                 loader.FileName = AppGlobalSettings.DataFileName;
-                loader.SetDelegate(Progress);
-                loader.Execute();
+                //loader.SetDelegate(Progress);
+                Task t1= Task.Run(()=> loader.Execute());
+                Task t2 = Progress();
+                await Task.WhenAll(new[] {t1,t2});
                 progressBar1.Visible = false;
                 repo.StarsList = loader.StarsList;
                 bsSpectralClass.DataSource = repo.StarsList;
@@ -155,12 +157,13 @@ namespace SpectralClassOfStars
             SortByMassOfSun.Enabled = true;
         }
 
-        private void Progress(int count)
+        private async Task Progress()
         {
-            progressBar1.Step = count*2;
-            progressBar1.PerformStep();
-            progressBar1.Maximum += count;
-            Thread.Sleep(700);
+            for (int i = 0; i < progressBar1.Maximum; i++)
+            {
+                progressBar1.Value+=1;
+                await Task.Delay(1000);
+            }
         }
 
         private void progressBar1_Click(object sender, EventArgs e)
