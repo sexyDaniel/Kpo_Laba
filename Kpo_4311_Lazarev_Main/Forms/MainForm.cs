@@ -25,6 +25,7 @@ namespace SpectralClassOfStars
             DeleteStarClass.Enabled = false;
             EditStarClass.Enabled = false;
             progressBar1.Visible = false;
+            SortByMassOfSun.Enabled = false;
         }
 
         private void OpenFile_Click(object sender, EventArgs e)
@@ -151,6 +152,7 @@ namespace SpectralClassOfStars
             SearchSpectralClass.Enabled = true;
             DeleteStarClass.Enabled = true;
             EditStarClass.Enabled = true;
+            SortByMassOfSun.Enabled = true;
         }
 
         private void Progress(int count)
@@ -164,6 +166,12 @@ namespace SpectralClassOfStars
         private void progressBar1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void SortByMassOfSun_Click(object sender, EventArgs e)
+        {
+            repo.Sort();
+            Reload();
         }
     }
 }

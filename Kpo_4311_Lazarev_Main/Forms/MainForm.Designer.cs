@@ -44,6 +44,7 @@
             this.dvgSpectralClass = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.SortByMassOfSun = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgSpectralClass)).BeginInit();
             this.SuspendLayout();
@@ -98,7 +99,8 @@
             this.AddStarClass,
             this.DeleteStarClass,
             this.EditStarClass,
-            this.SearchSpectralClass});
+            this.SearchSpectralClass,
+            this.SortByMassOfSun});
             this.starsToolStripMenuItem.Name = "starsToolStripMenuItem";
             this.starsToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.starsToolStripMenuItem.Text = "Stars";
@@ -106,35 +108,35 @@
             // openStar
             // 
             this.openStar.Name = "openStar";
-            this.openStar.Size = new System.Drawing.Size(206, 26);
+            this.openStar.Size = new System.Drawing.Size(216, 26);
             this.openStar.Text = "Open Data Of Star";
             this.openStar.Click += new System.EventHandler(this.openStar_Click_1);
             // 
             // AddStarClass
             // 
             this.AddStarClass.Name = "AddStarClass";
-            this.AddStarClass.Size = new System.Drawing.Size(206, 26);
+            this.AddStarClass.Size = new System.Drawing.Size(216, 26);
             this.AddStarClass.Text = "Add StarClass";
             this.AddStarClass.Click += new System.EventHandler(this.AddStarClass_Click);
             // 
             // DeleteStarClass
             // 
             this.DeleteStarClass.Name = "DeleteStarClass";
-            this.DeleteStarClass.Size = new System.Drawing.Size(206, 26);
+            this.DeleteStarClass.Size = new System.Drawing.Size(216, 26);
             this.DeleteStarClass.Text = "Delete StarClass";
             this.DeleteStarClass.Click += new System.EventHandler(this.DeleteStarClass_Click);
             // 
             // EditStarClass
             // 
             this.EditStarClass.Name = "EditStarClass";
-            this.EditStarClass.Size = new System.Drawing.Size(206, 26);
+            this.EditStarClass.Size = new System.Drawing.Size(216, 26);
             this.EditStarClass.Text = "Edit StarClass";
             this.EditStarClass.Click += new System.EventHandler(this.EditStarClass_Click);
             // 
             // SearchSpectralClass
             // 
             this.SearchSpectralClass.Name = "SearchSpectralClass";
-            this.SearchSpectralClass.Size = new System.Drawing.Size(206, 26);
+            this.SearchSpectralClass.Size = new System.Drawing.Size(216, 26);
             this.SearchSpectralClass.Text = "Search StarClass";
             this.SearchSpectralClass.Click += new System.EventHandler(this.SearchSpectralClass_Click);
             // 
@@ -150,10 +152,10 @@
             // dvgSpectralClass
             // 
             this.dvgSpectralClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgSpectralClass.Location = new System.Drawing.Point(12, 272);
+            this.dvgSpectralClass.Location = new System.Drawing.Point(12, 31);
             this.dvgSpectralClass.Name = "dvgSpectralClass";
             this.dvgSpectralClass.RowTemplate.Height = 24;
-            this.dvgSpectralClass.Size = new System.Drawing.Size(648, 167);
+            this.dvgSpectralClass.Size = new System.Drawing.Size(648, 408);
             this.dvgSpectralClass.TabIndex = 2;
             // 
             // progressBar1
@@ -164,6 +166,14 @@
             this.progressBar1.Size = new System.Drawing.Size(648, 23);
             this.progressBar1.TabIndex = 3;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            // 
+            // SortByMassOfSun
+            // 
+            this.SortByMassOfSun.Name = "SortByMassOfSun";
+            this.SortByMassOfSun.Size = new System.Drawing.Size(216, 26);
+            this.SortByMassOfSun.Text = "Sort by mass of sun";
+            this.SortByMassOfSun.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SortByMassOfSun.Click += new System.EventHandler(this.SortByMassOfSun_Click);
             // 
             // MainForm
             // 
@@ -203,5 +213,6 @@
         private System.Windows.Forms.ToolStripMenuItem SearchSpectralClass;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ToolStripMenuItem SortByMassOfSun;
     }
 }
